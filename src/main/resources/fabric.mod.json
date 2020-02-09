@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "netherroof",
+  "version": "${version}",
+  "name": "NetherRoofMod",
+  "description": "Nerf the nether's roof!",
+  "authors": [
+    "Deximus-Maximus"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "LGPL-3.0",
+  "icon": "assets/netherroof/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dex.netherroof.NetherRoof"
+    ],
+    "client": [],
+    "server": []
+  },
+  "mixins": [
+    "netherroof.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  }
+}
