@@ -3,7 +3,8 @@
   "package": "dex.netherroof.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "ChunkGeneratorMixin"
+    "ChunkGeneratorMixin",
+    "SpawnBehaviorMixin"
   ],
   "client": [],
   "server": [],
