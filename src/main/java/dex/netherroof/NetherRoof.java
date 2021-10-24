@@ -26,7 +26,7 @@ public class NetherRoof implements ModInitializer {
 
     public static final String MOD_ID = "netherroof";
     public static final String MOD_NAME = "NetherRoofMod";
-    public static final int NETHER_HEIGHT = 64;
+    public static final int NETHER_HEIGHT = 128;
     public static final GameRules.Key<GameRules.BooleanRule> DO_DEATH = register("killOnRoof", GREEN_CATEGORY, GameRuleFactory.createBooleanRule(true));
 
     private static <T extends GameRules.Rule<T>> GameRules.Key<T> register(String name, CustomGameRuleCategory category, GameRules.Type<T> type) {
@@ -41,7 +41,7 @@ public class NetherRoof implements ModInitializer {
             minecraftServer.getPlayerManager().getPlayerList().forEach(playerEntity -> {
                 if (Objects.requireNonNull(playerEntity.getServer()).getGameRules().getBoolean(DO_DEATH) && playerEntity.getServerWorld().getDimension().hasCeiling() && !playerEntity.isCreativeLevelTwoOp()) {
                     Vec3d v = playerEntity.getPos();
-                    if (v.y >= 128) {
+                    if (v.y >= NETHER_HEIGHT) {
                         playerEntity.damage(DamageSource.OUT_OF_WORLD, 5f);
                     }
                 }
