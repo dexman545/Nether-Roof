@@ -5,7 +5,8 @@
   "name": "NetherRoofMod",
   "description": "Nerf the nether's roof!",
   "authors": [
-    "Deximus-Maximus"
+    "Deximus-Maximus",
+    "SalveMundiProd"
   ],
   "contributors": [],
   "contact": {},
@@ -19,9 +20,7 @@
     "client": [],
     "server": []
   },
-  "mixins": [
-    "netherroof.mixins.json"
-  ],
+  "mixins": [],
   "depends": {
     "fabricloader": ">=0.4.0",
     "fabric-game-rule-api-v1": "^1.0.0"
